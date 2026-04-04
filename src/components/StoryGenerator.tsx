@@ -250,6 +250,13 @@ export default function StoryGenerator({
             className="w-full"
             autoPlay
           />
+          <a
+            href={audioUrl}
+            download={`${title || "bedtime-story"}.mp3`}
+            className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-purple-500 dark:text-blue-400 hover:text-purple-700 dark:hover:text-blue-300 transition-colors"
+          >
+            ⬇️ Download story
+          </a>
         </div>
       )}
 
