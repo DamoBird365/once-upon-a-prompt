@@ -142,7 +142,7 @@ export default function StoryGenerator({
               <button
                 key={len.id}
                 onClick={() => setStoryLength(len.id)}
-                className={`flex-1 py-3 px-2 rounded-xl font-medium text-sm transition-all ${
+                className={`flex-1 py-3 px-1.5 sm:px-2 rounded-xl font-medium text-xs sm:text-sm transition-all ${
                   storyLength === len.id
                     ? "bg-purple-500 dark:bg-blue-500 text-white shadow-md scale-105"
                     : "bg-white dark:bg-slate-800 text-gray-600 dark:text-slate-300 border-2 border-gray-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-blue-500"
@@ -216,7 +216,7 @@ export default function StoryGenerator({
       )}
 
       {title && (
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400">
           {theme.emoji} {title}
         </h2>
       )}
@@ -264,7 +264,7 @@ export default function StoryGenerator({
         </details>
       )}
 
-      <div className="flex gap-3 pt-4">
+      <div className="flex flex-col sm:flex-row gap-3 pt-4">
         <button
           onClick={generate}
           className="flex-1 py-3 px-6 rounded-xl font-semibold text-purple-700 dark:text-blue-300 bg-purple-100 dark:bg-blue-950/50 hover:bg-purple-200 dark:hover:bg-blue-900/50 transition-all"

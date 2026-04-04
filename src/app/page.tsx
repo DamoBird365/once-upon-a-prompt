@@ -35,26 +35,26 @@ export default function Home() {
       <ThemeToggle />
 
       {/* Header */}
-      <header className="text-center pt-8 pb-4 px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400">
+      <header className="text-center pt-6 sm:pt-8 pb-4 px-4">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400">
           ✨ Once Upon a Prompt
         </h1>
-        <p className="mt-2 text-gray-500 dark:text-slate-400 text-lg">
+        <p className="mt-1 sm:mt-2 text-gray-500 dark:text-slate-400 text-sm sm:text-lg">
           Personalised AI bedtime stories for your little ones
         </p>
       </header>
 
       {/* Progress dots */}
-      <div className="flex justify-center gap-3 py-4">
+      <div className="flex justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-4">
         {[
           { id: "details", label: "👦 Kids" },
           { id: "theme", label: "📖 Theme" },
           { id: "generate", label: "✨ Story" },
         ].map((s, i) => (
-          <div key={s.id} className="flex items-center gap-3">
+          <div key={s.id} className="flex items-center gap-2 sm:gap-3">
             {i > 0 && (
               <div
-                className={`w-8 h-0.5 ${
+                className={`hidden sm:block w-8 h-0.5 ${
                   step === s.id || (step === "generate" && i <= 2) || (step === "theme" && i <= 1)
                     ? "bg-purple-300 dark:bg-blue-500"
                     : "bg-gray-200 dark:bg-slate-700"
@@ -62,7 +62,7 @@ export default function Home() {
               />
             )}
             <div
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+              className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 step === s.id
                   ? "bg-purple-500 dark:bg-blue-500 text-white shadow-md"
                   : "bg-white dark:bg-slate-800 text-gray-400 dark:text-slate-500 border border-gray-200 dark:border-slate-700"
@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Content */}
       <main className="max-w-2xl mx-auto px-4 py-6">
-        <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 dark:border-slate-700/50 p-6 md:p-8">
+        <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 dark:border-slate-700/50 p-4 sm:p-6 md:p-8">
           {/* Step 1: Kid Details */}
           {step === "details" && (
             <div className="space-y-6">

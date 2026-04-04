@@ -61,7 +61,7 @@ export default function KidForm({ kids, onChange }: KidFormProps) {
       {kids.map((kid, index) => (
         <div
           key={index}
-          className="relative p-5 rounded-2xl border-2 border-dashed border-purple-200 dark:border-blue-800 bg-purple-50/50 dark:bg-slate-800/50 space-y-4"
+          className="relative p-4 sm:p-5 rounded-2xl border-2 border-dashed border-purple-200 dark:border-blue-800 bg-purple-50/50 dark:bg-slate-800/50 space-y-4"
         >
           {kids.length > 1 && (
             <button
@@ -102,7 +102,7 @@ export default function KidForm({ kids, onChange }: KidFormProps) {
                 <button
                   key={p.value}
                   onClick={() => updateKid(index, { pronouns: p.value })}
-                  className={`flex-1 py-2.5 px-3 rounded-xl font-medium text-sm transition-all ${
+                  className={`flex-1 py-2.5 px-2 sm:px-3 rounded-xl font-medium text-xs sm:text-sm transition-all ${
                     kid.pronouns === p.value
                       ? "bg-purple-500 dark:bg-blue-500 text-white shadow-md scale-105"
                       : "bg-white dark:bg-slate-800 text-gray-600 dark:text-slate-300 border-2 border-gray-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-blue-500"
@@ -151,7 +151,7 @@ export default function KidForm({ kids, onChange }: KidFormProps) {
                   }
                   title={c.name}
                   aria-label={`${c.name}${kid.colour === c.value ? " (selected)" : ""}`}
-                  className={`w-10 h-10 rounded-full ${c.bg} transition-all border-2 border-transparent ${
+                  className={`w-11 h-11 rounded-full ${c.bg} transition-all border-2 border-transparent ${
                     kid.colour === c.value
                       ? `ring-4 ${c.ring} ${c.darkRing} ring-offset-2 dark:ring-offset-slate-800 scale-110`
                       : "opacity-70 hover:opacity-100 hover:scale-105"
@@ -177,7 +177,7 @@ export default function KidForm({ kids, onChange }: KidFormProps) {
                   onChange={(e) => updateKid(index, { companionName: e.target.value })}
                   placeholder="e.g. Mr Whiskers"
                   maxLength={30}
-                  className="w-full px-3 py-2 rounded-xl border-2 border-purple-100 dark:border-blue-900 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 text-sm focus:ring-2 focus:ring-purple-300 dark:focus:ring-blue-500 focus:border-transparent placeholder:text-gray-300 dark:placeholder:text-slate-600 transition-all"
+                  className="w-full px-3 py-2 rounded-xl border-2 border-purple-100 dark:border-blue-900 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 text-base focus:ring-2 focus:ring-purple-300 dark:focus:ring-blue-500 focus:border-transparent placeholder:text-gray-300 dark:placeholder:text-slate-600 transition-all"
                 />
               </div>
               <div>
@@ -190,7 +190,7 @@ export default function KidForm({ kids, onChange }: KidFormProps) {
                   onChange={(e) => updateKid(index, { companionDesc: e.target.value })}
                   placeholder="e.g. ginger cat, stuffed dinosaur, fluffy bunny toy"
                   maxLength={60}
-                  className="w-full px-3 py-2 rounded-xl border-2 border-purple-100 dark:border-blue-900 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 text-sm focus:ring-2 focus:ring-purple-300 dark:focus:ring-blue-500 focus:border-transparent placeholder:text-gray-300 dark:placeholder:text-slate-600 transition-all"
+                  className="w-full px-3 py-2 rounded-xl border-2 border-purple-100 dark:border-blue-900 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 text-base focus:ring-2 focus:ring-purple-300 dark:focus:ring-blue-500 focus:border-transparent placeholder:text-gray-300 dark:placeholder:text-slate-600 transition-all"
                 />
               </div>
             </div>
