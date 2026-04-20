@@ -18,7 +18,10 @@ export async function POST(request: NextRequest) {
 
     const response = await fetch(VOICE_API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0",
+      },
       body: JSON.stringify(body),
     });
 
